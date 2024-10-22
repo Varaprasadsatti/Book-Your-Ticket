@@ -18,7 +18,10 @@ const BookingSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Email is required"],
-    match: [/^\S+@\S+\.\S+$/, "Please provide a valid email address"],
+    match: [
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Please provide a valid email address"
+    ],
   },
   branch: {
     type: String,
@@ -29,12 +32,12 @@ const BookingSchema = new mongoose.Schema({
     required: [true, "Academic year is required"],
   },
   studentMobile: {
-    type: Number,
+    type: String,
     required: [true, "Student mobile number is required"],
     match: [/^\d{10}$/, "Student mobile number must be 10 digits"],
   },
   parentMobile: {
-    type: Number,
+    type: String,
     required: [true, "Parent mobile number is required"],
     match: [/^\d{10}$/, "Parent mobile number must be 10 digits"],
   },

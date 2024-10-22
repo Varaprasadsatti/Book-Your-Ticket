@@ -98,27 +98,27 @@ function Home() {
         });
     }
 
-    let payment_data = {
-        name : "Prasad",
-        amount : 1,
-        number:"9999999999",
-        MID : "MID" + Date.now(),
-        transactionId : "T" + Date.now()
-    }
+    // let payment_data = {
+    //     name : "Prasad",
+    //     amount : 1,
+    //     number:"9999999999",
+    //     MID : "MID" + Date.now(),
+    //     transactionId : "T" + Date.now()
+    // }
 
-    async function handlePayment(){
-        try{
-            await axios.post(`${import.meta.env.VITE_API_URL}/api/user/booking/order`,payment_data).then(res=>{
-                console.log(res.data); 
-            }).catch(err => {
-                console.log(err);
-            })
-        }
-        catch(e){
-            console.log(e);
+    // async function handlePayment(){
+    //     try{
+    //         await axios.post(`${import.meta.env.VITE_API_URL}/api/user/booking/order`,payment_data).then(res=>{
+    //             console.log(res.data); 
+    //         }).catch(err => {
+    //             console.log(err);
+    //         })
+    //     }
+    //     catch(e){
+    //         console.log(e);
             
-        }
-    }
+    //     }
+    // }
 
     useEffect(() => {
         dispatch(fetchAllBuses());
@@ -165,7 +165,7 @@ function Home() {
                 <Button onClick={handleViewTickets} className="w-52 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-blue-600 hover:bg-blue-500 text-white">
                     View Ticket's
                 </Button>
-                <Button onClick={handlePayment}>Pay Now</Button>
+                {/* <Button onClick={handlePayment}>Pay Now</Button> */}
             </div>
         </div>
     );

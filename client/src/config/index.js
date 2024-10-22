@@ -182,13 +182,13 @@ export const registerFormControls = [
       label: "Student Mobile",
       placeholder: "Enter your Mobile Number",
       componentType: "input",
-      type: "number", 
+      type: "text", 
     },
     {
       name: "parentMobile",
       label: "Parent Mobile",
       placeholder: "Enter your Parent Mobile Number",
       componentType: "input",
-      type: "number", 
+      type: "text", 
     },
   ]
