@@ -1,3 +1,4 @@
+import { academicYearMap, branchMap, destinationMap } from "@/config"
 import { DialogContent, DialogTitle } from "../ui/dialog"
 import { Label } from "../ui/label"
 
@@ -20,11 +21,11 @@ function TicketDetails({ ticketDetails }) {
                 </div>
                 <div className="flex items-center justify-between border-b border-gray-200">
                     <p className="font-semibold text-gray-700">Branch:</p>
-                    <Label className="text-gray-800">{ticketDetails?.branch}</Label>
+                    <Label className="text-gray-800">{branchMap[ticketDetails?.branch]}</Label>
                 </div>
                 <div className="flex items-center justify-between border-b border-gray-200">
                     <p className="font-semibold text-gray-700">Academic Year:</p>
-                    <Label className="text-gray-800">{ticketDetails?.academicYear}</Label>
+                    <Label className="text-gray-800">{academicYearMap[ticketDetails?.academicYear]}</Label>
                 </div>
                 <div className="flex items-center justify-between border-b border-gray-200">
                     <p className="font-semibold text-gray-700">Student Mobile:</p>
@@ -40,7 +41,7 @@ function TicketDetails({ ticketDetails }) {
                 </div>
                 <div className="flex items-center justify-between border-b border-gray-200">
                     <p className="font-semibold text-gray-700">Destination:</p>
-                    <Label className="text-gray-800">{ticketDetails?.destination}</Label>
+                    <Label className="text-gray-800">{destinationMap[ticketDetails?.destination]}</Label>
                 </div>
                 <div className="flex items-center justify-between border-b border-gray-200">
                     <p className="font-semibold text-gray-700">Ticket Fare:</p>

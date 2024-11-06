@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog } from "@/components/ui/dialog"
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import TicketDetails from "@/components/user/ticketDetails"
+import { academicYearMap, branchMap, destinationMap } from "@/config"
 import { getAllBookingsByUserId } from "@/store/user-slice"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
@@ -19,6 +20,7 @@ function Tickets(){
     useEffect(() => {
         dispatch(getAllBookingsByUserId(user?.id))
     }, [dispatch])
+    
 
     return (
         <div className="h-screen bg-gray-900 text-gray-300">
@@ -42,9 +44,9 @@ function Tickets(){
                             bookingList.map((bookingItem) => (
                                 <TableRow key={bookingItem?.id} className="hover:bg-gray-700 transition">
                                     <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.name}</TableCell>
-                                    <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.academicYear}</TableCell>
-                                    <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.branch}</TableCell>
-                                    <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.destination}</TableCell>
+                                    <TableCell className="px-4 py-2 border-b border-gray-700">{academicYearMap[bookingItem?.academicYear]}</TableCell>
+                                    <TableCell className="px-4 py-2 border-b border-gray-700">{branchMap[bookingItem?.branch]}</TableCell>
+                                    <TableCell className="px-4 py-2 border-b border-gray-700">{destinationMap[bookingItem?.destination]}</TableCell>
                                     <TableCell className="px-4 py-2 border-b border-gray-700">₹{bookingItem?.busFare}</TableCell>
                                     <TableCell className="px-4 py-2 border-b border-gray-700">
                                         <Dialog 

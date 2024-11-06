@@ -43,7 +43,7 @@ export const registerFormControls = [
     {
       label: "Bus Type",
       name: "busType",
-      componentType: "select", // Dropdown
+      componentType: "select",
       options: [
         { id: "palle_velugu", label: "Palle Velugu" },
         { id: "ultra_delux", label: "Ultra Delux" },
@@ -52,14 +52,14 @@ export const registerFormControls = [
     {
       label: "Capacity",
       name: "capacity",
-      componentType: "input", // Input field for capacity
-      type: "number", // Number type for bus capacity
+      componentType: "input",
+      type: "number", 
       placeholder: "Enter bus capacity",
     },
     {
       label: "Start Point",
       name: "startPoint",
-      componentType: "select", // Dropdown
+      componentType: "select",
       options: [
         { id: "iiit_nuzvid", label: "IIIT NUZVID" },
         { id: "iiit_srikakulam", label: "IIIT SRIKAKULAM" },
@@ -68,7 +68,7 @@ export const registerFormControls = [
     {
       label: "End Point",
       name: "endPoint",
-      componentType: "select", // Dropdown
+      componentType: "select", 
       options: [
         { id: "srikakulam", label: "Srikakulam" },
         { id: "kakinada", label: "Kakinada" },
@@ -91,8 +91,8 @@ export const registerFormControls = [
     {
       label: "Bus Fare",
       name: "busFare",
-      componentType: "input", // Input field for bus fare
-      type: "number", // Text type for bus fare
+      componentType: "input", 
+      type: "number", 
       placeholder: "Enter bus fare",
     },
   ];
@@ -123,6 +123,24 @@ export const registerFormControls = [
       "vizianagaram": "Vizianagaram",
       "bhimavaram": "Bhimavaram"
     }
+
+  export const branchMap = {
+    "puc" : "PUC",
+    "ece" : "ECE",
+    "cse" : "CSE",
+    "mech" : "MECH",
+    "civil" : "CIVIL",
+    "eee" : "EEE"
+  }
+
+  export const academicYearMap = {
+    "puc1" : "PUC-1",
+    "puc2" : "PUC-2",
+    "e1" : "E1",
+    "e2" : "E2",
+    "e3" : "E3",
+    "e4" : "E4",
+  }
   
   export const busTypeMap = {
     "palle_velugu" : "Palle Velugu",

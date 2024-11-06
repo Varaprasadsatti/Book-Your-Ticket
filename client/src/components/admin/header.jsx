@@ -12,13 +12,11 @@ function AdminHeader({ setOpen }) {
 
   return (
     <header className="flex items-center justify-between px-4 py-3 bg-gray-800 text-white border-b border-gray-700 shadow-lg">
-      {/* Toggle Button for Small Screens */}
       <Button onClick={() => setOpen(true)} className="lg:hidden sm:block">
         <AlignJustify />
         <span className="sr-only">Toggle Menu</span>
       </Button>
 
-      {/* Logout Button */}
       <div className="flex flex-1 justify-end">
         <Button
           onClick={handleLogout}
@@ -33,3 +31,4 @@ function AdminHeader({ setOpen }) {
 }
 
 export default AdminHeader;
+

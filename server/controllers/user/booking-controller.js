@@ -157,4 +157,4 @@ const getBookingDetails = async (req,res) => {
 }
 
 
-module.exports = {createBooking,getAllBookingsByUser,getBookingDetails,createOrder}
+module.exports = {createBooking,getAllBookingsByUser,getBookingDetails}

@@ -4,7 +4,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import TicketDetails from "@/components/user/ticketDetails"
-import { bookTicketFormElements } from "@/config"
+import { academicYearMap, bookTicketFormElements, branchMap, destinationMap } from "@/config"
 import { useToast } from "@/hooks/use-toast"
 import { fetchAllBuses } from "@/store/buses-slice"
 import { deleteBookingDetails, editBookingDetails, getAllBookings } from "@/store/admin-slice/booking-slice"
@@ -135,9 +135,9 @@ function AdminBookings() {
                                     return (
                                         <TableRow key={bookingItem?._id} className="hover:bg-gray-600">
                                             <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.studentId}</TableCell>
-                                            <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.academicYear}</TableCell>
-                                            <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.branch}</TableCell>
-                                            <TableCell className="px-4 py-2 border-b border-gray-700">{bookingItem?.destination}</TableCell>
+                                            <TableCell className="px-4 py-2 border-b border-gray-700">{academicYearMap[bookingItem?.academicYear]}</TableCell>
+                                            <TableCell className="px-4 py-2 border-b border-gray-700">{branchMap[bookingItem?.branch]}</TableCell>
+                                            <TableCell className="px-4 py-2 border-b border-gray-700">{destinationMap[bookingItem?.destination]}</TableCell>
                                             <TableCell className="px-4 py-2 border-b border-gray-700">₹{bookingItem?.busFare}</TableCell>
                                             <TableCell className="px-4 py-2 border-b border-gray-700">
                                                 <Dialog open={openViewDetailsDialog} onOpenChange={() => {
